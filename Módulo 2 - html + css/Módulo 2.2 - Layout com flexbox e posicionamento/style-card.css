@@ -1,0 +1,31 @@
+body{
+    background-color: #e0e0e0;
+    font-family: sans-serif;
+}
+
+.card{
+    width: 350px;
+    margin: 50px auto;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+    border-radius: 8px;
+    overflow: hidden;
+}   
+
+.card img{
+    width: 100%;
+    display: block;
+}
+.card-content{
+    padding: 20px;
+}
+
+.read-more-btn {
+    display: inline-block;
+    background-color: lightblue;
+    color: black;
+    padding: 10px 15px;
+    border-radius:5px;
+    text-decoration: none;
+    margin-top: 15px;
+}

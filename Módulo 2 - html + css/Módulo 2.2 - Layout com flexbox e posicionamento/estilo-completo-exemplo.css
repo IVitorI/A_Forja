@@ -1,0 +1,160 @@
+/* ==== ESTILOS GLOBAIS E CONTAINER ==== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px; /* Adiciona um respiro lateral */
+}
+
+/* ==== CABEÇALHO ==== */
+header {
+    background-color: #2c3e50; /* Cor escura */
+    color: white;
+    padding: 15px 0;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.menu-principal {
+    flex-grow: 1;
+}
+
+.menu-principal ul {
+    display: flex; /* Faltou aplicar flex aqui */
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-principal a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Estilização básica para botões */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cta-comprar button {
+    background-color: #3498db; /* Azul */
+    color: white;
+}
+
+/* ==== SEÇÃO HERO ==== */
+.hero {
+    background-color: #ecf0f1; /* Fundo claro */
+    padding: 60px 0;
+}
+
+.hero .container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+/* CORREÇÃO DO ERRO DE DIGITAÇÃO */
+.hero-texto, .hero-imagem {
+    flex: 1;
+}
+
+.hero-imagem {
+    height: 300px; /* Altura visível para o placeholder */
+    background-color: #bdc3c7; /* Cinza para o placeholder */
+    border-radius: 10px;
+}
+
+/* ==== SEÇÃO FEATURES ==== */
+.features {
+    padding: 60px 0;
+    background-color: #f9f9f9; /* Fundo levemente acinzentado */
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: flex;
+    gap: 30px; /* Espaçamento entre os cards */
+}
+
+.feature-card {
+    flex: 1;
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+/* ==== RODAPÉ ==== */
+footer {
+    background-color: #2c3e50; /* Mesma cor do header */
+    color: white;
+    padding: 40px 0;
+}
+
+footer .container {
+    display: flex;
+    gap: 30px;
+}
+
+.footer-section {
+    flex: 1;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section a {
+    color: #bdc3c7; /* Cor mais sutil para links de rodapé */
+    text-decoration: none;
+}
+
+
+/* ==== ESTILOS GLOBAIS ==== */
+/* Aqui vão o box-sizing, a margem do body, a fonte... */
+
+/* ==== CONTAINER ==== */
+/* Aqui vai a regra para centralizar o conteúdo */
+
+/* ==== CABEÇALHO (HEADER) ==== */
+/* 1. Estilos do contêiner principal do header */
+/* 2. Regras de layout Flexbox para o .container dentro dele */
+/* 3. Estilos para o logo, menu e botão */
+/* 4. Estilos para a lista e links do menu */
+
+/* ==== SEÇÃO HERO ==== */
+/* 1. Estilos da seção .hero */
+/* 2. Regras de layout Flexbox para o .container dentro dela */
+/* 3. Estilos para as colunas de texto e imagem */
+
+/* ...e assim por diante para CADA seção. */

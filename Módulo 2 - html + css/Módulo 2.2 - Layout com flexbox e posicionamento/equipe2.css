@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #bbbaba;
+    margin: 0;    
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    /* Consistência */
+    margin: 0 auto;
+    padding: 5px 0;
+}
+
+header {
+    background-color: white;
+    border-bottom: 1px solid #1a1919;
+}
+
+header h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em; 
+}
+
+main {
+    background-color: #f0efef;
+}
+
+.title-teans {
+    text-align: center;
+}
+
+.cards-grid {
+    display: flex;
+    gap: 80px;
+    margin-bottom: 300px;
+}
+
+/* O Card Principal - Agora também é um contêiner flex VERTICAL */
+.team-card {
+    display: flex; /* Para controlar o alinhamento dos filhos */
+    flex-direction: column; /* Empilha os filhos verticalmente */
+    align-items: center; /* Centraliza todos os filhos horizontalmente */
+    
+    background-color: white;
+    height: 350px; /* Mantendo sua altura original, por enquanto */
+    flex: 1; /* Divide o espaço da grade */
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 1px rgba(0,0,0,0.2);
+    padding-bottom: 20px; /* Adiciona espaço abaixo dos ícones */
+}
+
+/* O Avatar (Placeholder) */
+.card-image-placeholder {
+    width: 90px;
+    height: 90px;
+    background-color: darkgray;
+    border-radius: 50%;
+    margin-top: 20px; /* Espaço acima do avatar */
+    margin-bottom: 15px; /* Espaço abaixo do avatar */
+}
+
+/* O Bloco de Informações */
+.info-card {
+    text-align: center; /* Centraliza o texto dentro deste bloco */
+    margin-bottom: auto; /* Truque Mágico! Empurra o rodapé para baixo */
+}
+
+.info-card h4 {
+    margin-bottom: 5px; /* Pequeno espaço entre nome e cargo */
+}
+
+.info-card p {
+    margin: 0;
+    color: #555; /* Cor mais suave para o cargo */
+    font-size: 0.9em;
+}
+
+
+/* O Rodapé do Card (onde ficam os ícones) */
+.footer-card {
+    background-color: #f8f9fa; /* Fundo cinza claro */
+    width: 100%; /* Ocupa toda a largura do card */
+    padding: 15px 0; /* Espaçamento vertical */
+    border-bottom-left-radius: 8px; /* Arredonda os cantos inferiores */
+    border-bottom-right-radius: 8px;
+    
+    display: flex; /* Para alinhar os ícones */
+    justify-content: center; /* Centraliza os ícones horizontalmente */
+    gap: 20px; /* Espaço entre os ícones */
+}
+
+/* Os Ícones Sociais (Placeholders) */
+.social-icon {
+    width: 30px; /* Tamanho um pouco menor */
+    height: 30px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+/* ===== Limpeza de Regras Antigas e Desnecessárias ===== */
+
+
+.footer{
+        
+    margin-top: 50px;     
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.footer-card{
+    display: flex;
+    justify-content: center;    
+    gap: 20px;
+}
+
+.social-icon{    
+    width: 50px;
+    height: 50px;
+    background-color: gray;
+    border-radius: 80px;
+}
+footer{
+    display: flex;
+    justify-content: center;
+    padding: 25px;
+    
+}

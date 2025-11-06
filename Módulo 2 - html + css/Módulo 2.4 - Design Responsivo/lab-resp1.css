@@ -1,0 +1,50 @@
+body { font-family: sans-serif; 
+    background-color: black;
+}
+
+.caixa-responsiva {
+    margin: 20px;
+    padding: 40px;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+
+    /* Estilo Base (Mobile First) */
+    background-color: #3498db; /* Azul */
+}
+
+.grid-responsivo {
+    margin: 20px;
+    border: 3px solid white;
+    padding: 10px;
+
+    /* Estilo Base (Mobile First) - Uma coluna */
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+.grid-responsivo .item {
+    background-color: #e74c3c; /* Vermelho */
+    color: white;
+    padding: 50px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+/* --- MEDIA QUERIES VIRÃO AQUI --- */
+@media (max-width : 600px){
+    .caixa-responsiva{
+        background-color: purple;
+
+    }
+}
+
+@media (min-width : 700px){
+    .grid-responsivo {        
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+

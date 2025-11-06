@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* É uma boa prática zerar a margem padrão do body */
+    margin: 0;
+}
+
+header {
+    /* CORREÇÃO CRÍTICA: Ativa o Flexbox */
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: slategray;
+}
+
+.logo, .login {
+    /* Perfeito: Itens rígidos */
+    flex: none;
+}
+
+.menu {
+    /* Perfeito: Item fluido que ocupa o espaço livre */
+    flex-grow: 1;
+}
+
+/* CORREÇÃO DE SELETOR: Seja específico */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0; /* Zera a margem padrão da lista */
+    display: flex;
+    justify-content: center;
+}
+
+.menu a {
+    /* Estilos que faltaram para os links */
+    padding: 15px;
+    color: white;
+    text-decoration: none;
+    display: block; /* Melhora a área de clique */
+}

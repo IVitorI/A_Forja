@@ -1,0 +1,30 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.container-posicao {
+    position: relative; 
+    background-color: #f0f0f0;
+    border: 3px solid #333;
+    margin: 40px;
+    padding: 20px;
+}
+
+.item-pos {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 40px;
+    margin: 10px;
+}
+
+.item-1 { background-color: #3498db; } /* Azul */
+.item-2 { background-color: #e74c3c; } /* Vermelho */
+.item-3 { background-color: #2ecc71; } /* Verde */
+
+.item-2 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}

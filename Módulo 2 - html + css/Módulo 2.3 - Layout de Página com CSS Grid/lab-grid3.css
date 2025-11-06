@@ -1,0 +1,54 @@
+/* Reset básico e altura total */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+/* O Body será nosso Contêiner Grid */
+body {
+    display: grid; /* Ativa o Grid */
+    min-height: 100vh; /* Garante altura mínima */
+
+    /* --- Definição das Trilhas --- */
+    grid-template-columns: 200px 1fr; /* Sidebar 200px | Conteúdo Fluido */
+    grid-template-rows: 80px auto 60px; /* Header 80px | Conteúdo Auto | Footer 60px */
+    gap: 10px; /* Um pequeno espaço entre as áreas */
+
+    /* --- PASSO 2: Desenhar o Layout (O Tabuleiro) --- */
+    grid-template-areas:
+        "header header" /* Linha 1: header ocupa as 2 colunas */
+        "nav    main"   /* Linha 2: nav na col 1, main na col 2 */
+        "footer footer";/* Linha 3: footer ocupa as 2 colunas */
+}
+
+/* Estilos básicos para visualizar as áreas */
+.grid-section {
+    padding: 20px;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header-area { background-color: #e74c3c; } /* Vermelho */
+.nav-area    { background-color: #34495e; } /* Azul Escuro */
+.main-area   { background-color: #ecf0f1; color: #333; } /* Cinza Claro */
+.footer-area { background-color: #95a5a6; } /* Cinza Médio */
+
+/* --- PASSO 1: Nomear os Itens --- */
+.header-area {
+    grid-area: header; /* Dando o nome "header" para este item */
+}
+
+.nav-area {
+    grid-area: nav;    /* Dando o nome "nav" para este item */
+}
+
+.main-area {
+    grid-area: main;   /* Dando o nome "main" para este item */
+}
+
+.footer-area {
+    grid-area: footer; /* Dando o nome "footer" para este item */
+}

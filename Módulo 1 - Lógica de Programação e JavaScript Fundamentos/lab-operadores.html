@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratório JS 04: Operações e Comparações</title>
+
+    <style>
+        body {
+            background-color: #c9c9c9;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let numA = 20;
+        let numB = 4;
+
+        console.log('soma = ' + (numA + numB));
+        console.log('subtracao = ' + (numA - numB));
+        console.log('produto = ' + numA * numB);
+        console.log('divisao = ' + numA / numB);
+        console.log('resto = ' + numA % numB);
+
+        const idadeMinima = 18;
+        const idadeUsuario = 31;
+
+        console.log(idadeMinima === idadeUsuario);
+        console.log(idadeUsuario !== idadeMinima);
+        console.log(idadeUsuario >= idadeMinima);
+
+        let temCarteiraMotorista = true;
+        let temCarro = false;
+
+        let podeDirigirCarro = temCarteiraMotorista && temCarro;
+        console.log(podeDirigirCarro)
+
+        let podeSeLocomover = temCarteiraMotorista || temCarro;
+        console.log(podeSeLocomover)
+
+        console.log(!temCarro)
+    </script>
+</body>
+
+</html>

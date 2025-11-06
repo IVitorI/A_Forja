@@ -1,0 +1,35 @@
+body {
+    font-family: sans-serif;
+}
+
+.container-flex {
+    background-color: #f0f0f0;
+    border: 3px solid #333;
+    margin: 20px;
+    padding: 10px;
+
+    /* Apenas ativando o Flexbox por enquanto */
+    display: flex;
+}
+
+.item {
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 1.2em;
+    flex: 1;
+}
+
+/* Itens com tamanhos e cores diferentes de propósito */
+.item-1 {
+    background-color: #3498db; /* Azul */
+    width: 100px;
+}
+.item-2 {
+    background-color: #e74c3c; /* Vermelho */
+    width: 250px;
+}
+.item-3 {
+    background-color: #2ecc71; /* Verde */
+    width: 150px;
+}

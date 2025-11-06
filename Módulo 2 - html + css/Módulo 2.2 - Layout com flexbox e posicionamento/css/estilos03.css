@@ -1,0 +1,44 @@
+body {
+    background-color: #333;
+    color: #f1f1f1;
+    font-family: sans-serif;
+}
+
+main{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: lightblue;
+}
+
+/* Regras que se aplicam APENAS ao h1 */
+h1 {
+    text-align: center;
+}
+
+footer{
+    border-top: 1px solid #f1f1f1;
+    margin-top: 30px;
+    padding: 20px;
+    text-align: center;
+}
+
+img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: 0 auto 30px;   
+}
+
+a{
+    color: lightblue;
+    text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
+}

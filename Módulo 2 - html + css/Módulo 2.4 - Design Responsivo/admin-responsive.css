@@ -1,0 +1,291 @@
+/* =================================
+   1. CONFIGURAÇÃO GLOBAL (Mobile First)
+   ================================= */
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body {
+    background-color: #f0f2f5;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    /* max-width: 1200px;  << REMOVIDO ou COMENTADO na base */
+    margin: 0 auto;
+    padding: 0 15px;
+    /* Padding menor para mobile */
+}
+
+/* =================================
+   2. ARQUITETURA PRINCIPAL (GRID VERTICAL - Mobile First)
+   ================================= */
+.grid-container {
+    /* Aplicado ao body */
+    display: grid;
+    min-height: 100vh;
+    /* Usar 'auto' para header/footer permite que a altura se ajuste ao conteúdo, 
+       o que pode ser melhor em mobile. '1fr' para o meio ainda funciona bem. */
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+        "header"
+        "middle"
+        "footer";
+}
+
+.header-area {
+    grid-area: header;
+}
+
+.middle-area {
+    grid-area: middle;
+    display: block;
+    /* Garante empilhamento (padrão de div, mas explícito) */
+}
+
+.footer-area {
+    grid-area: footer;
+}
+
+
+/* =================================
+   3. CABEÇALHO (Mobile First)
+   ================================= */
+.header-area {
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    padding: 10px 0;
+    /* Padding vertical menor para mobile */
+}
+
+/* Centraliza apenas o logo no mobile */
+.header-area .container {
+    display: flex;
+    justify-content: center;
+    /* <<< MUDANÇA: Centraliza o logo */
+    align-items: center;
+    height: 100%;
+}
+
+.logo-placeholder {
+    background-color: #4A90E2;
+    color: white;
+    padding: 8px 15px;
+    /* Tamanho ligeiramente menor */
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* Esconde busca e ações no mobile */
+.search-bar,
+.user-actions {
+    display: none;
+    /* <<< MUDANÇA: Escondido por padrão */
+}
+
+/* (Regras .search-input-placeholder, .search-bar button, .icon-placeholder não são necessárias na base, pois estão escondidas) */
+
+
+/* =================================
+   4. ÁREA CENTRAL (Mobile First - Empilhada)
+   ================================= */
+/* .middle-area já está display: block por padrão (ou definido acima) */
+
+.sidebar-area {
+    /* REMOVIDO: width: 220px; flex-shrink: 0; */
+    background-color: #1d3557;
+    color: white;
+    padding: 20px;
+    /* Padding um pouco menor */
+    text-align: center;
+    /* Pode centralizar o menu no mobile */
+}
+
+.main-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav li {
+    margin-bottom: 10px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #a8dadc;
+    font-size: 1.1em;
+    display: block;
+    /* Faz o link ocupar a largura toda */
+    padding: 5px 0;
+}
+
+.main-nav a:hover {
+    color: white;
+}
+
+
+.main-content-area {
+    /* REMOVIDO: flex: 1; */
+    background-color: #f0f2f5;
+    padding: 20px;
+    /* Padding menor */
+    /* overflow-y: auto;  << Pode remover se não houver scroll interno no mobile */
+}
+
+.content-padding h1 {
+    margin-top: 0;
+    color: #1d3557;
+    font-size: 1.8em;
+    /* Tamanho um pouco menor para mobile */
+    text-align: center;
+    /* Centraliza título no mobile */
+}
+
+/* =================================
+   5. CARDS DENTRO DO MAIN (Mobile First - 1 Coluna)
+   ================================= */
+.cards-grid {
+    display: grid;
+    /* Ou display: flex; flex-direction: column; */
+    grid-template-columns: 1fr;
+    /* <<< MUDANÇA: Garante 1 coluna */
+    gap: 20px;
+    /* Espaço entre cards */
+    margin-bottom: 30px;
+}
+
+.info-card {
+    /* REMOVIDO: flex: 1; */
+    background-color: white;
+    padding: 20px;
+    /* Padding menor */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    /* Centraliza conteúdo do card */
+}
+
+.info-card h4 {
+    margin-top: 0;
+    color: #457b9d;
+}
+
+.card-value {
+    font-size: 1.8em;
+    /* Tamanho menor */
+    font-weight: bold;
+    color: #1d3557;
+}
+
+
+/* =================================
+   6. OUTRA SEÇÃO DE CONTEÚDO (Mobile First)
+   ================================= */
+.other-content {
+    background-color: white;
+    padding: 20px;
+    /* Padding menor */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+}
+
+
+/* =================================
+   7. RODAPÉ (Mobile First)
+   ================================= */
+.footer-area {
+    background-color: #e9ecef;
+    color: #6c757d;
+    padding: 15px 0;
+    /* Padding menor */
+}
+
+.footer-area .container {
+    text-align: center;
+    /* display: flex; e justify-content: center; REMOVIDOS do container global */
+}
+
+/* --- FIM DO CSS BASE --- */
+
+/* --- MEDIA QUERIES VIRÃO ABAIXO --- */
+
+@media (min-width: 768px) {
+    .middle-area {
+        display: flex;
+    }
+
+    .sidebar-area {
+        width: 220px;
+        flex-shrink: 0;
+    }
+
+    .main-content-area {
+        flex: 1;
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width : 1024px) {
+    .cards-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .search-bar,
+    .user-actions {
+        display: flex;
+    }
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .search-bar {
+        display: flex;
+        flex: 1;
+        margin: 0 30px;
+    }
+
+    .search-input-placeholder {
+        flex: 1;
+        border: 1px solid gray;
+        border-radius: 5px 0px 0px 5px;
+        padding: 5px;
+        color: grey;
+    }
+
+
+    button {
+        border-radius: 0px 5px 5px 0px;
+        color: #4a90e2;
+        border: 2px solid #4a90e2;
+        background-color: white;
+        font-weight: bold;
+    }
+
+    .user-actions {
+        display: flex;
+ 
+    }
+
+    .logo-placeholder,
+    .user-actions {
+        flex-shrink: 0;
+    }
+}

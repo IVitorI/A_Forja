@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0px;
+}
+
+footer{
+    display: flex;
+    background-color: brown;
+    color: aliceblue;
+    padding: 10px 20px;
+}
+
+.footer-section{
+    flex: 1;
+    padding: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0; /* Esta linha faltou para zerar o recuo padrão */
+    margin: 0;  /* Também é uma boa prática zerar a margem */
+}
+
+.footer-section a{
+    text-decoration: none;
+    color: antiquewhite;
+}

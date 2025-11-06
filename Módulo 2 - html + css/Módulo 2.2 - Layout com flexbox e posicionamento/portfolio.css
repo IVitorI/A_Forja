@@ -1,0 +1,121 @@
+/* ==== CONFIGURAÇÃO GLOBAL ==== */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: #f4f4f9;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px; /* Consistência */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==== CABEÇALHO ==== */
+.main-header {
+    background-color: brown;
+    color: white;
+    padding: 15px 0;
+}
+
+.main-header .container {
+    display: flex;
+    justify-content: space-between; /* A ordem pertence ao contêiner flex */
+    align-items: center;
+}
+
+.main-header .main-nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-header .main-nav a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.1em;
+}
+
+/* ==== SEÇÃO SOBRE MIM ==== */
+.about-me {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.about-me .container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.profile-picture {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-right: 50px;
+
+    /* Ordens para a imagem de fundo */
+    background-image: url(../imagens/perfil.jpg); /* Assumindo a estrutura de pastas */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bio-text {
+    flex-grow: 1;
+}
+
+/* ==== SEÇÃO PROJETOS ==== */
+.projects {
+    padding: 80px 0;
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.projects-grid {
+    display: flex;
+    gap: 30px;
+}
+
+.project-card {
+    flex: 1; /* A ORDEM QUE FALTAVA, NOVAMENTE */
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden; /* Garante que a imagem não vaze */
+}
+
+.card-image-placeholder {
+    height: 200px;
+    background-color: #ccc;
+}
+
+.project-card h4, .project-card p {
+    padding: 0 20px;
+}
+.project-card p {
+    padding-bottom: 20px;
+}
+
+
+/* ==== RODAPÉ ==== */
+.main-footer {
+    background-color: brown;
+    color: #bdc3c7;
+    padding: 25px 0;
+}
+
+.main-footer .container {
+    text-align: center;
+}

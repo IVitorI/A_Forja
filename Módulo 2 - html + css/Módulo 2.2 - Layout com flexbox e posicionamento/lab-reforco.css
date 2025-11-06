@@ -1,0 +1,32 @@
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background-color: rgb(116, 114, 113);
+}
+
+
+.container-pai {
+    background-color: #f0f0f0;
+    border: 3px solid #333;
+    margin: 40px;
+    padding: 10px;
+
+    /* Ativando o Flexbox no Pai */
+    display: flex;
+    gap: 10px; /* Um pequeno espaço entre os itens */
+    
+}
+
+.item-filho {
+    background-color: #e74c3c; /* Vermelho */
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 40px 20px;
+    border: 2px solid white;
+
+    /* Definindo um tamanho base pequeno de propósito */
+    width: 100px;
+
+    flex: 1;
+}

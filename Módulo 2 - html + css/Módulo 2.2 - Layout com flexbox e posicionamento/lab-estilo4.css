@@ -1,0 +1,28 @@
+
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+}
+
+.container-pai {
+    border: 3px solid #333;
+    margin: 20px;
+    /* Usando flex para colocar as caixas lado a lado */
+    display: flex;
+}
+
+.caixa {
+    background-color: #3498db; /* Azul */
+    color: white;
+    font-size: 1.5em;
+    
+    /* A matemática problemática: */
+    width: 50%;
+    padding: 30px; 
+}
+
+/* Dando uma cor diferente à segunda caixa para melhor visualização */
+.caixa:nth-child(2) {
+    background-color: #e74c3c; /* Vermelho */
+}

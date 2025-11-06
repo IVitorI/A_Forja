@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste JavaScript</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+        for (let i = 1; i <= 5; i++) {
+            console.log(i);
+        }
+        console.log('\n')
+
+        for (let i = 10; i >= 0; i--) {
+            console.log(i);
+        }
+
+        console.log('\n')
+        // CORRETO
+        let percentualCarregado = 0;
+
+        console.log("Iniciando carregamento..."); // Mensagem inicial opcional
+
+        while (percentualCarregado < 100) { // Condição correta
+            // Mensagem formatada corretamente
+            console.log("Carregando... " + percentualCarregado + "%");
+            percentualCarregado += 10; // Incremento
+        }
+
+        // Mensagem final APÓS o loop
+        console.log("Carregamento Concluído!");
+
+    </script>
+</body>
+
+</html>

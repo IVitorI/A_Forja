@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construindo e Usando Funções</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+        function mostrarMensagem() {
+            console.log('Função chamada com sucesso!');
+        }
+
+        mostrarMensagem();
+        mostrarMensagem()
+
+        function cumprimentar(nome) {
+            console.log('Bom dia, ' + nome + '!');
+        }
+
+        cumprimentar('Vítor');
+        cumprimentar('Mestre');
+        cumprimentar('Engenheiro');
+
+        function calcularAreaRetangulo(largura, altura) {
+
+            return (largura * altura);
+        }
+
+        let areaCalculada = calcularAreaRetangulo(10,5)
+        console.log(  'A área do retângulo é: ' + areaCalculada)
+
+        function verificaMaiorIdade(idade) {
+            
+
+            if (idade >= 18) {
+                return 'Maior de idade';
+            } else {
+                return 'Menor de idade';
+            }
+        }
+
+        let statusIdade1 = verificaMaiorIdade(31)
+        let statusIdade2 = verificaMaiorIdade(15)
+
+        console.log(statusIdade1)
+        console.log(statusIdade2)
+
+    </script>
+</body>
+
+</html>

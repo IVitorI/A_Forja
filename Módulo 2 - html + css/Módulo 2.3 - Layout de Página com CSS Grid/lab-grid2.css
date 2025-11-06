@@ -1,0 +1,36 @@
+body {
+    font-family: sans-serif;
+}
+h1 { text-align: center; }
+
+.grid-container {
+    background-color: #f0f0f0;
+    border: 3px solid #333;
+    margin: 20px auto; /* Centraliza o container */
+    padding: 10px;
+    width: 80%; /* Largura um pouco menor para visualização */
+
+    /* --- Definindo a Grade (O Tabuleiro) --- */
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* 3 colunas iguais */
+    grid-template-rows: 150px 150px;    /* 2 linhas de altura fixa */
+    gap: 15px;
+}
+
+.grid-item {
+    background-color: #e74c3c; /* Vermelho */
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    padding: 30px;
+    border: 2px solid white;
+    text-align: center;
+}
+
+/* Cores diferentes para destacar itens específicos */
+.item-1 { background-color: #3498db; } /* Azul */
+.item-5 { background-color: #2ecc71; } /* Verde */
+
+/* --- Aqui daremos as ordens de posicionamento --- */
+.item-1 { grid-column: 2 / 3; grid-row: 1 / span 2; }
+.item-5 { grid-column: 1 / span 2; grid-row: 2 / 3; }

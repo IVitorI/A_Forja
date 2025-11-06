@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab-variaveis</title>
+
+    <style>
+        body {
+            background-color: #c9c9c9;
+        }
+    </style>
+</head>
+<body>  
+    <script>
+        const nomeCompleto = "Vítor Machado Coelho";
+        const anoNascimento = 1994;
+        let anoAtual = 2025;
+        let idade;
+
+        idade = anoAtual - anoNascimento;
+
+        console.log("Meu nome é " + nomeCompleto + ", nasci em " + anoNascimento + " e tenho "+ idade + " anos");
+
+        anoAtual = 2026; 
+        idade = anoAtual - anoNascimento;
+
+        console.log("No próximo ano, terei " + idade +" anos.");
+    </script>
+</body>
+</html>

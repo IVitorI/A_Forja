@@ -1,0 +1,142 @@
+/* ==== CONFIGURAÇÃO GLOBAL ==== */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0; /* É bom zerar o padding também */
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #f0f2f5; /* Fundo cinza claro para contraste */
+    /* REMOVIDO: O Grid no body não era necessário para ESTE desafio de posicionamento */
+    /* O padding-top será adicionado depois para compensar o header fixo */
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto; /* Correção: 0 auto é mais explícito */
+    padding: 0 20px;
+}
+
+/* ==== CABEÇALHO FIXO ==== */
+header {
+    /* CORREÇÃO CRUCIAL #1: Header Fixo */
+    position: fixed; /* Fixo em relação à janela */
+    top: 0;          /* Colado no topo */
+    left: 0;         /* Alinhado à esquerda */
+    width: 100%;     /* Ocupa toda a largura da janela */
+    z-index: 1000;   /* Garante que fique acima de outros conteúdos */
+
+    background-color: white;
+    padding: 15px 0; /* Espaçamento vertical interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    /* REMOVIDO: height: 80px; - A altura deve vir do conteúdo + padding */
+}
+
+/* Compensar o espaço ocupado pelo header fixo */
+body {
+    padding-top: 80px; /* Adiciona espaço no topo do body igual (ou maior) à altura do header */
+}
+
+
+/* Layout interno do Header com Flexbox */
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* REMOVIDO: position: relative; - Não era o parente correto para o badge */
+}
+
+.placeholder-logo {
+    background-color: gray;
+    height: 50px;
+    width: 120px; /* Um logo retangular como exemplo */
+    border-radius: 5px;
+}
+
+header nav {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav li a {
+    text-decoration: none;
+    color: #333; /* Cor escura para contraste com fundo branco */
+    font-weight: bold;
+}
+
+/* Container para agrupar ícone e badge */
+.notification-area {
+     position: relative; /* <<< CORREÇÃO CRUCIAL #2: ESTE é o parente relativo */
+}
+
+
+.placeholder-notificacao,
+.placeholder-perfil {
+    background-color: gray;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%; /* Ícones circulares */
+    display: flex; /* Para centralizar o conteúdo, se houver */
+    justify-content: center;
+    align-items: center;
+}
+
+/* O Badge posicionado absolutamente EM RELAÇÃO ao .notification-area */
+.Badge {
+    position: absolute; /* <<< CORREÇÃO CRUCIAL #2: O badge flutua */
+    top: -5px;          /* Deslocado para cima */
+    right: -5px;         /* Deslocado para a direita (do canto do ícone) */
+
+    background-color: brown;
+    color: white;
+    height: 22px;         /* Ligeiramente maior para caber o número */
+    width: 22px;
+    border-radius: 50%;   /* Círculo perfeito */
+    
+    /* Centralizando o número dentro do badge com Flexbox */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+/* ==== CONTEÚDO PRINCIPAL ==== */
+main {
+    /* REMOVIDO: min-height: 110vh; - Desnecessário, o conteúdo real define a altura */
+    padding: 40px 0; /* Espaçamento vertical */
+   min-height: 100vh;
+}
+
+main .container p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 20px; /* Espaço entre parágrafos */
+}
+
+
+/* ==== RODAPÉ ==== */
+footer {
+    background-color: #333; /* Fundo escuro */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    /* REMOVIDO: display: flex; justify-content: center; - Desnecessário para um único <p> */
+}
+
+/* REMOVIDO: .header-area, .main-area, .footer-area com grid-area. Não usamos Grid no body neste desafio. */

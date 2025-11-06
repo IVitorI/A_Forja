@@ -1,0 +1,185 @@
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    margin: 0;
+}
+
+body {
+    background-color: #c9c9c9;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: #c9c9c9;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+body {
+    /* Ou a classe do seu wrapper principal, ex: .grid-container */
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 80px 1fr 60px;
+    /* Header | Middle | Footer */
+    grid-template-areas:
+        "header"
+        /* Header ocupa a linha 1 */
+        "middle"
+        /* A área central ocupa a linha 2 (1fr) */
+        "footer";
+    /* Footer ocupa a linha 3 */
+    margin: 0;
+    /* Zerar margem do body */
+}
+
+header {
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+header .container .search-bar {
+    display: flex;
+}
+
+header .container button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 0 5px 5px 0;
+}
+
+header .container .user-actions {
+    display: flex;
+    gap: 20px;
+}
+
+header .container .icon-placeholder {
+    width: 40px;
+    height: 40px;
+    background-color: gray;
+    border-radius: 5px;
+}
+
+.search-input-placeholder {
+    width: 750px;
+    height: 40px;
+    border: 1px solid black;
+    border-radius: 5px 0 0 5px;
+    padding: auto;
+}
+
+.logo-placeholder {
+    height: 60px;
+    width: 60px;
+    background-color: gray;
+    border-radius: 50%;
+}
+
+
+.middle-area {
+    display: flex;
+    /* Transforma a área central em contêiner Flex */
+    /* Não precisa de grid-area aqui mais, ele já está posicionado pelo grid pai */
+}
+
+.sidebar-area {
+    width: 220px;
+    /* Largura fixa da sidebar */
+    flex-shrink: 0;
+    /* Impede que encolha */
+    background-color: #e74c3c;
+    /* Fundo escuro */
+    padding: 20px;
+    /* grid-area: sidebar; -> REMOVA ou COMENTE esta linha */
+}
+
+.main-content-area {
+    flex: 1;
+
+    /* Fundo claro */
+    padding: 30px;
+    /* Espaçamento interno */
+    overflow-y: auto;
+    /* Adiciona scroll se o conteúdo for maior que a tela */
+    /* grid-area: main; -> REMOVA ou COMENTE esta linha */
+}
+
+aside ul {
+    list-style: none;
+}
+
+aside a {
+    text-decoration: none;
+    color: white;
+    line-height: 2em;
+    font-weight: bold;
+}
+
+main h1 {
+    color: white;
+    text-align: center;
+}
+
+.cards-grid {
+    display: flex;
+    gap: 50px;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.info-card {
+    flex: 1;
+    background-color: white;
+    padding: 50px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.other-content {    
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside a:hover {
+    color: #95a5a6;
+}
+
+footer {    
+    background-color: #333;
+    color: white;
+}
+
+footer .container {
+    display: flex;
+    justify-content: center;
+}
+
+
+/* Atribua as áreas aos filhos diretos */
+.header-area {
+    grid-area: header;
+}
+
+.middle-area {
+    grid-area: middle;
+}
+
+/* O wrapper da área central */
+.footer-area {
+    grid-area: footer;
+}

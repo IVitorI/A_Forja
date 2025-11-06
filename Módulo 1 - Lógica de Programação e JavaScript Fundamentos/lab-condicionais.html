@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>condicionais</title>
+
+    <style>
+        body {
+            background-color: black;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        const idade = 25;
+
+        if (idade >= 18) {
+            console.log('Maior de idade')
+        } else {
+            console.log('Menor de idade')
+        }
+
+        let usuarioLogado = true;
+        let ehAdmin = false;
+
+        if (usuarioLogado && ehAdmin) { // Testa a condição mais específica primeiro
+            console.log('Bem-vindo, Administrador!');
+        } else if (usuarioLogado) { // Se não for admin, basta testar se está logado
+            console.log('Bem-vindo, usuário!');
+        } else { // Se não caiu em nenhuma das anteriores, só pode ser não logado
+            console.log('Por favor, faça o login.');
+        }
+
+        let temperatura = 15;
+
+        if (temperatura > 30) {
+            console.log('Esta muito quente!');
+        } else if (temperatura > 20) {
+            console.log('Temperatura agradável');
+        } else if (temperatura > 10) {
+            console.log('Está um pouco frio');
+        } else {
+            console.log('Está muito frio!');
+        }
+    </script>
+</body>
+
+</html>

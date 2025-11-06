@@ -1,0 +1,14 @@
+.menu ul{
+    list-style: none;
+    padding: 0;
+    display: flex;    
+    justify-content: center;
+    align-items: center;
+    background-color: darkslateblue;
+}
+
+.menu a{
+    color:whitesmoke;
+    padding: 30px;    
+    text-decoration: none;
+}
