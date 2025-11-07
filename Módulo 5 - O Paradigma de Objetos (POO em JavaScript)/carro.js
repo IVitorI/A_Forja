@@ -16,7 +16,9 @@ class Carro {
         this.ligado = false;
         console.log('Carro ' + this.marca + ' ' + this.modelo + ' desligado')
     }
+    
 }
+
 
 const meuFusca = new Carro("Volkswagen", "Fusca");
 meuFusca.ligar()
