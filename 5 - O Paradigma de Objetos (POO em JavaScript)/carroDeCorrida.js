@@ -45,10 +45,3 @@ class CarroDeCorrida extends Carro {
     console.log(`VRUUUM! O ${this.modelo} está pronto para correr!`);
   }
 }
-
-const minhaFerrari = new CarroDeCorrida("Ferrari", "F50", 325);
-
-minhaFerrari.ligar(); // Deve mostrar o log "VRUUMM" (o método sobrescrito)
-console.log(minhaFerrari.velocidadeMaxima); // Deve mostrar 325 (o novo)
-console.log(minhaFerrari.ligado); // Deve mostrar 'true'
-minhaFerrari.desligar(); // Deve mostrar o log "desligado" (o método HERDADO)
