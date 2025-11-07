@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #c9c9c9;
+}
+
+#container-de-produtos {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;   
+    display: flex;
+    gap: 50px;
+}
+
+.card {
+    margin-top: 50px;
+    background-color: rgb(216, 218, 218);
+    flex: 1;   
+    border-radius: 8px;
+    box-shadow: 0px 0px 8px 1px;
+    text-align: center;
+}
+
+.card img{
+    
+    width: 100%;
+}
+
+.card-info {
+    padding: 5px;
+}

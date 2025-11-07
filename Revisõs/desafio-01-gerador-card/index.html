@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="CardProduto.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container-de-produtos">
+        <script>
+            // 1. Criar as "instâncias" (Módulo 5)
+            const produto1 = new CardProduto(
+                "Placa de Vídeo",
+                "A melhor placa para jogos em 4K.",
+                1500,
+                "https://via.placeholder.com/150" // URL de imagem de exemplo
+            );
+
+            const produto2 = new CardProduto(
+                "Processador",
+                "CPU de 16 núcleos para máxima performance.",
+                1200,
+                "https://via.placeholder.com/150"
+            );
+
+            // 2. A "Cola" (Esta parte é uma "cola" do Módulo 6)
+            // Pegar o container do HTML
+            const container = document.getElementById("container-de-produtos");
+
+            // 3. Injetar o HTML gerado (A SÍNTESE)
+            container.innerHTML += produto1.render(); // Chama o método do Objeto 1
+            container.innerHTML += produto2.render(); // Chama o método do Objeto 2
+        </script>
+    </div>
+
+
+
+
+</body>
+</html>
